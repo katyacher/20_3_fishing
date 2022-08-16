@@ -8,7 +8,6 @@ int main() {
     std::string fish_in_river;
 
     int fishcounter = 0;
-    int pos = 0;
 
     std::ofstream basket("/home/kate/CLionProjects/20_3_fishing/basket.txt", std::ios::app);
     std::ifstream river("/home/kate/CLionProjects/20_3_fishing/river.txt");
@@ -21,9 +20,7 @@ int main() {
         std::cout << "Error opening file" << std::endl;
     } else{
         while(!river.eof()){
-            river.seekg(pos);
             getline(river, fish_in_river);
-            pos = river.tellg();
             if(fish_in_river == my_fish){
                 if(!basket.is_open()){
                     std::cout << "Error opening file" << std::endl;
