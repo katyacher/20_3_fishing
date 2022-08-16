@@ -9,9 +9,8 @@ int main() {
 
     int fishcounter = 0;
 
-    std::ofstream basket("/home/kate/CLionProjects/20_3_fishing/basket.txt", std::ios::app);
-    std::ifstream river("/home/kate/CLionProjects/20_3_fishing/river.txt");
-
+    std::ofstream basket("basket.txt", std::ios::app);
+    std::ifstream river("river.txt");
 
     std::cout << "What kind of fish do you want to catch? : ";
     std::cin >> my_fish;
